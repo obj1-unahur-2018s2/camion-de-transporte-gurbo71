@@ -1,0 +1,19 @@
+import cosas.*
+
+// auto-generated at 18/09/2018 20:20:06
+test "exported test from REPL session" {
+	
+	contenedorPortuario.agregar(arenaAGranel)
+	contenedorPortuario.agregar(knightRider)
+	contenedorPortuario.agregar(bumblebee)
+	contenedorPortuario.nivelPeligrosidad()
+	//devuelve 15
+	contenedorPortuario.peso()
+	//devuelve 1400
+	embalajeDeSeguridad.embalar(residuosRadioactivos)
+	embalajeDeSeguridad.peso()
+	//devuelve 0
+	embalajeDeSeguridad.nivelPeligrosidad()
+	//devuelve 100
+	
+}
