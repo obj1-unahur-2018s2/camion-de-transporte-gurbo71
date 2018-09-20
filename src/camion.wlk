@@ -1,7 +1,7 @@
 import cosas.*
 
 object camion {
-	const property cosas = [knightRider,bumblebee,paqueteDeLadrillos,arenaAGranel]
+	const property cosas = [knightRider,bumblebee,paqueteDeLadrillos]
 	const tara = 1000
 	const pesoMaximo = 2500
 	
@@ -26,16 +26,15 @@ object camion {
 	}
 	
 	method objetosMasPeligrososQue(unaCosa) {
-		return self.objetosPeligrosos(cosas.nivelPeligrosidad())
-		
+		return self.objetosPeligrosos(cosas.nivelPeligrosidad())	
 	}
 	
 	method puedeCircularEnRuta(nivelMaximoPeligrosidad) {
-		return cosas.all{c=>c.nivelPeligrosidad() < nivelMaximoPeligrosidad}
+		return cosas.any{c=>c.nivelPeligrosidad() < nivelMaximoPeligrosidad}
 	}
 	
 	method tieneAlgoQuePesaEntre(min, max) {
-		return cosas.any{c=>c.between(min,max)}
+		return cosas.any{c=>c.peso().between(min,max)}
 		
 	}
 	

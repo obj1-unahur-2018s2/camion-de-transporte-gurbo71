@@ -16,19 +16,14 @@ object paqueteDeLadrillos {
 	var property cantidad = 0
 	
 	method nivelPeligrosidad() { return 2 }
-	method agregarLadrillos(cant) { cantidad = cant }
-	//method cantidadDeLadrillos() { return if (cant) }
-	
+	method peso() {	return pesoPorLadrillo * cantidad }
 }
 
 object arenaAGranel {
-	var _arena=0
+	var property kgArena = 0
 	
-	method agregarArena(arena) { _arena = arena }
 	method nivelPeligrosidad() { return 1 }
-	method peso() { return _arena }
-	
-	
+	method peso() { return kgArena }
 }
 
 object bateriaAntiaerea {
